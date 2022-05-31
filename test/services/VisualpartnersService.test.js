@@ -31,6 +31,7 @@ describe("Unit Testing Code Challenge", () => {
         expect(students[1].haveCertification).toBe(true)
         expect(students.length).toBe(2)
     });
+    
     test("2. Filter all emails of students where haveCertification = true ", () => {
         const students = [{                            
             id: "6264d5d89f1df827eb84bb23",
