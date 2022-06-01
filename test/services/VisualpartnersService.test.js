@@ -57,6 +57,8 @@ describe("Unit Testing Code Challenge", () => {
             haveCertification: true
         }];
         const getAllEmailsOfStudents = VisualparnertsService.getEmailsWhereHaveCertificationIsTrue(students, true)
+        expect(students[0].haveCertification).toBe(true)
+        expect(students[1].haveCertification).toBe(true)
         expect(students[0].email).toBe("Todd@visualpartnership.xyz")  
         expect(students[1].email).toBe("Sexton@visualpartnership.xyz")  
         expect(students.length).toBe(2)    
