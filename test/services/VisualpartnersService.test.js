@@ -62,5 +62,22 @@ describe("Unit Testing Code Challenge", () => {
         expect(students[0].email).toBe("Todd@visualpartnership.xyz")  
         expect(students[1].email).toBe("Sexton@visualpartnership.xyz")  
         expect(students.length).toBe(2)    
-    })
+    });
+    test("3. Get all visualpartners where credits > 500", () => {
+        const students = [{                            
+            id: "6264d5d89f1df827eb84bb23",
+            name: "Warren",
+            email: "Todd@visualpartnership.xyz",
+            credits: 508,
+            enrollments: [
+                "Visual Thinking Intermedio",
+                "Visual Thinking Avanzado"
+                ],
+            previousCourses: 1,
+            haveCertification: true
+        }];
+        const getStudentsByCredits = VisualparnertsService.getCreditsOfVisualpartners(students, 500);     
+        expect(students[0].credits).toBeGreaterThan(500);
+        expect(students.length).toBe(1)
+    });
 })
