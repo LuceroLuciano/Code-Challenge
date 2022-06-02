@@ -68,7 +68,7 @@ describe("Unit Testing Code Challenge", () => {
             id: "6264d5d89f1df827eb84bb23",
             name: "Warren",
             email: "Todd@visualpartnership.xyz",
-            credits: 508,
+            credits: 501,
             enrollments: [
                 "Visual Thinking Intermedio",
                 "Visual Thinking Avanzado"
