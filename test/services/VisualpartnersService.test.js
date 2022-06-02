@@ -1,4 +1,4 @@
-const VisualparnertsService = require('../../lib/services/VisualpartnersService')
+const VisualparnertsService = require("../../lib/services/VisualpartnersService");
 
 describe("Unit Testing Code Challenge", () => {
     test("1. Consult all emails of students with haveCertifition is equals True", () => {
@@ -10,7 +10,7 @@ describe("Unit Testing Code Challenge", () => {
             enrollments: [
                 "Visual Thinking Intermedio",
                 "Visual Thinking Avanzado"
-                ],
+            ],
             previousCourses: 1,
             haveCertification: true
         },
@@ -26,10 +26,10 @@ describe("Unit Testing Code Challenge", () => {
             haveCertification: true
         }];            
 
-        const getEmail = VisualparnertsService.getEmailsWithHaveCertification(students, true)
-        expect(students[0].haveCertification).toBe(true)
-        expect(students[1].haveCertification).toBe(true)
-        expect(students.length).toBe(2)
+        const getEmail = VisualparnertsService.getEmailsWithHaveCertification(students, true);
+        expect(students[0].haveCertification).toBe(true);
+        expect(students[1].haveCertification).toBe(true);
+        expect(students.length).toBe(2);
     });
     
     test("2. Filter all emails of students where haveCertification = true ", () => {
@@ -41,7 +41,7 @@ describe("Unit Testing Code Challenge", () => {
             enrollments: [
                 "Visual Thinking Intermedio",
                 "Visual Thinking Avanzado"
-                ],
+            ],
             previousCourses: 1,
             haveCertification: true
         },
@@ -56,12 +56,12 @@ describe("Unit Testing Code Challenge", () => {
             previousCourses: 6,
             haveCertification: true
         }];
-        const getAllEmailsOfStudents = VisualparnertsService.getEmailsWhereHaveCertificationIsTrue(students, true)
-        expect(students[0].haveCertification).toBe(true)
-        expect(students[1].haveCertification).toBe(true)
-        expect(students[0].email).toBe("Todd@visualpartnership.xyz")  
-        expect(students[1].email).toBe("Sexton@visualpartnership.xyz")  
-        expect(students.length).toBe(2)    
+        const getAllEmailsOfStudents = VisualparnertsService.getEmailsWhereHaveCertificationIsTrue(students, true);
+        expect(students[0].haveCertification).toBe(true);
+        expect(students[1].haveCertification).toBe(true);
+        expect(students[0].email).toBe("Todd@visualpartnership.xyz");  
+        expect(students[1].email).toBe("Sexton@visualpartnership.xyz");  
+        expect(students.length).toBe(2);    
     });
     test("3. Get all visualpartners where credits > 500", () => {
         const students = [{                            
@@ -72,12 +72,12 @@ describe("Unit Testing Code Challenge", () => {
             enrollments: [
                 "Visual Thinking Intermedio",
                 "Visual Thinking Avanzado"
-                ],
+            ],
             previousCourses: 1,
             haveCertification: true
         }];
         const getStudentsByCredits = VisualparnertsService.getCreditsOfVisualpartners(students, 500);     
         expect(students[0].credits).toBeGreaterThan(500);
-        expect(students.length).toBe(1)
+        expect(students.length).toBe(1);
     });
-})
+});

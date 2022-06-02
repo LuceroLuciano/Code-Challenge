@@ -3,15 +3,15 @@ const express = require("express");
 const app = express();
 app.use(express.json());
 
-const port = 3000
+const port = 3001;
 
 // path inicial, responderá a la url localhost: 300
-app.get('/', (req, res) => {
-    res.send('Hello World!, Welcome to Code Challenge')
-})
+app.get("/", (req, res) => {
+    res.send("Hello World!, Welcome to Code Challenge");
+});
 
 
 // Inicializar la app
 app.listen(port, () => {
-    console.log(`CodeChallenge API in localhost: ${port}`)
-})
+    console.log(`CodeChallenge API in localhost: ${port}`);
+});
